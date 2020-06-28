@@ -11,6 +11,10 @@ The app lets you order pizza online and have the following features:
 
 **Live Link Of The App:** https://protected-cliffs-88071.herokuapp.com/
 
+**Live Link Setup Uses:**
+- Heroku
+- db4free.net (that is slower than others but easy to set up)
+
 ## The API's endpoint
 
 - Get request to fetch all items: ```[site.url]/api/v1/items```
