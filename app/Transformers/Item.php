@@ -14,6 +14,7 @@ class Item
             'attributes' => [
                 'name' => $data->name,
                 'price' => $data->price,
+                'euro_price' => $data->euro_price,
                 'description' => $data->description,
                 'image' => $data->image,
                 'created_at' => $data->created_at,
