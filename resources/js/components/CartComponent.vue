@@ -15,7 +15,7 @@
                             <a href="menu-item-v1.html"><img src="http://androthemes.com/themes/html/slices/assets/img/prods-sm/1.png" alt="product"></a>
                             <div class="media-body">
                                 <h5> <a href="menu-item-v1.html" title="Pepperoni">{{pizza.attributes.name}}</a> </h5>
-                                <span>{{pizza.quantity}}x {{pizza.attributes.price}}$</span>
+                                <span>{{pizza.quantity}}x {{pizza.attributes.price}}$ / {{pizza.attributes.euro_price}}€</span>
                             </div>
                         </div>
                         <div class="cart-sidebar-item-meta">
@@ -23,6 +23,9 @@
                         </div>
                         <div class="cart-sidebar-price">
                             {{pizza.attributes.price * pizza.quantity  | totalPizzaPrice}}$
+                        </div>
+                        <div class="cart-sidebar-price">
+                            {{pizza.attributes.euro_price * pizza.quantity  | totalPizzaPrice}}€
                         </div>
                         <div class="close-btn" @click="removeFromCart(pizza)">
                             <span></span>
@@ -35,7 +38,7 @@
                 <img src="/img/empty_cart.png" class="emptyCart"/>
             </div>
             <div class="cart-sidebar-footer">
-                <h4>Total: <span>{{ cartState.total | totalPizzaPrice }}$</span> </h4>
+                <h4>Total: <span>{{ cartState.total | totalPizzaPrice }}$ / {{ cartState.totalInEuros | totalPizzaPrice }}€</span> </h4>
                 <a @click="checkout" v-if="cartState.items.length" class="btn-custom secondary">Checkout</a>
             </div>
         </aside>

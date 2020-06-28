@@ -1955,6 +1955,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -38536,7 +38539,9 @@ var render = function() {
                                 _vm._s(pizza.quantity) +
                                   "x " +
                                   _vm._s(pizza.attributes.price) +
-                                  "$"
+                                  "$ / " +
+                                  _vm._s(pizza.attributes.euro_price) +
+                                  "€"
                               )
                             ])
                           ])
@@ -38555,6 +38560,18 @@ var render = function() {
                                 )
                               ) +
                               "$\n                    "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "cart-sidebar-price" }, [
+                          _vm._v(
+                            "\n                        " +
+                              _vm._s(
+                                _vm._f("totalPizzaPrice")(
+                                  pizza.attributes.euro_price * pizza.quantity
+                                )
+                              ) +
+                              "€\n                    "
                           )
                         ]),
                         _vm._v(" "),
@@ -38588,7 +38605,12 @@ var render = function() {
               _vm._v("Total: "),
               _c("span", [
                 _vm._v(
-                  _vm._s(_vm._f("totalPizzaPrice")(_vm.cartState.total)) + "$"
+                  _vm._s(_vm._f("totalPizzaPrice")(_vm.cartState.total)) +
+                    "$ / " +
+                    _vm._s(
+                      _vm._f("totalPizzaPrice")(_vm.cartState.totalInEuros)
+                    ) +
+                    "€"
                 )
               ])
             ]),
