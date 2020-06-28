@@ -9,7 +9,7 @@ The app lets you order pizza online and have the following features:
  
  **Note:** At the moment, the app supports to place an order for the guest user. The sign up can be added later.
 
-**Demo:** https://protected-cliffs-88071.herokuapp.com/
+**Live Link Of The App:** https://protected-cliffs-88071.herokuapp.com/
 
 ## The API's endpoint
 
