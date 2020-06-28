@@ -4,6 +4,7 @@ export const cart = {
         items: [],
         deliveryCharges: 4.99,
         total: 0,
+        totalInEuros: 0,
         onCheckout: false
     },
 
@@ -14,6 +15,7 @@ export const cart = {
         item['quantity'] = quantity
         this.state.items.push(item)
         this.calculateTotal()
+        this.calculateTotalInEuros()
         this.saveStorage(this.state.items)
 
     },
@@ -29,6 +31,7 @@ export const cart = {
         });
 
         this.calculateTotal()
+        this.calculateTotalInEuros()
 
         this.saveStorage(this.state.items)
 
@@ -47,6 +50,7 @@ export const cart = {
         this.state.items = updatedItems
         this.saveStorage(updatedItems)
         this.calculateTotal()
+        this.calculateTotalInEuros()
 
     },
 
@@ -62,11 +66,24 @@ export const cart = {
 
     },
 
+    // calculate the total bill in euros
+    calculateTotalInEuros() {
+
+        var total = 0
+        this.state.items.forEach((element, index) => {
+            total += element.attributes.euro_price * element['quantity']
+        });
+
+        this.state.totalInEuros = total
+
+    },
+
     // reset the cart's data
     resetData(){
 
         this.state.items = []
         this.state.total = 0
+        this.state.totalInEuros = 0
         sessionStorage.removeItem("cartProducts");
 
     },
@@ -82,9 +99,10 @@ export const cart = {
         if (cartProducts) {
             this.state.items = cartProducts
             this.calculateTotal()
-            return  cartProducts
+            this.calculateTotalInEuros()
+            return cartProducts
         }else{
             return  this.state.items
         }
     }
-  };
+};
