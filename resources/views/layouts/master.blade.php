@@ -26,7 +26,7 @@
     <link href="{{ asset('css/all.min.css') }}" rel="stylesheet">
     {{--  <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">  --}}
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="{{ asset('css/material-components-web.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
