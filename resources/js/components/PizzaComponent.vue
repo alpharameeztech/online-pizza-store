@@ -18,7 +18,7 @@
                             <div  class="banner-controls">
                                 <a v-if="!cartState.items.some(item => item.id == pizza.id)" @click="addToCart(pizza)" class="btn-custom secondary">Order <i class="flaticon-shopping-bag"></i> </a>
                                 <a v-else @click="removeFromCart(pizza)" class="btn-custom primary">Remove <i class="flaticon-shopping-bag"></i> </a>
-                                <h4>${{pizza.attributes.price * quantity | decimal}}</h4>
+                                <h4>${{pizza.attributes.price * quantity | decimal}} / {{pizza.attributes.euro_price * quantity | decimal}}€</h4>
                             </div>
                         </div>
                         <div class="banner-nav-item-inner col-xl-6 col-lg-6">
