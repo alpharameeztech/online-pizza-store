@@ -37,11 +37,11 @@
                             </div>
                         </div>
                     </td>
-                    <td data-title="Price"> <strong>{{pizza.attributes.price}}$</strong> </td>
+                    <td data-title="Price"> <strong>{{pizza.attributes.price}}$ / {{pizza.attributes.euro_price}}€</strong> </td>
                     <td class="quantity" data-title="Quantity">
                         <input @change="updateQuantity(pizza, $event)"  type="number" class="qty form-control" :value="pizza.quantity ">
                     </td>
-                    <td data-title="Total"> <strong>{{ pizza.attributes.price * pizza.quantity  | decimal }}$</strong> </td>
+                    <td data-title="Total"> <strong>{{ pizza.attributes.price * pizza.quantity  | decimal }}$  / {{ pizza.attributes.euro_price * pizza.quantity  | decimal }}€</strong> </td>
                 </tr>
 
                 </tbody>
@@ -81,7 +81,7 @@
                         <tbody>
                         <tr>
                             <th>Subtotal</th>
-                            <td>{{ cartState.total | decimal }}$</td>
+                            <td>{{ cartState.total | decimal }}$ / {{ cartState.totalInEuros | decimal }}€</td>
                         </tr>
                         <tr>
                             <th>Delivery Charges</th>
@@ -89,7 +89,7 @@
                         </tr>
                         <tr>
                             <th>Total</th>
-                            <td> <b>{{ cartState.total + cartState.deliveryCharges | decimal }}$</b> </td>
+                            <td> <b>{{ cartState.total + cartState.deliveryCharges | decimal }}$ / {{ cartState.totalInEuros + cartState.deliveryCharges | decimal }}€</b> </td>
                         </tr>
                         </tbody>
                     </table>
@@ -175,25 +175,25 @@
                     address: this.address,
                     notes: this.notes
                 })
-                .then(function (response) {
+                    .then(function (response) {
 
-                    // save the new order
-                    // which is placed now
-                    self.newOrder = response.data.data
-                    self.order_placed = true
-                    self.is_loading = false
+                        // save the new order
+                        // which is placed now
+                        self.newOrder = response.data.data
+                        self.order_placed = true
+                        self.is_loading = false
 
-                    // reset the cart
-                    // when the order
-                    // is placed successfully
-                    cart.resetData()
-                    self.resetData()
+                        // reset the cart
+                        // when the order
+                        // is placed successfully
+                        cart.resetData()
+                        self.resetData()
 
-                })
-                .catch(function (error) {
-                })
-                .finally(function () {
-                });
+                    })
+                    .catch(function (error) {
+                    })
+                    .finally(function () {
+                    });
             },
 
             // reset the data to the default

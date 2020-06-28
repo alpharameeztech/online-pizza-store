@@ -38787,7 +38787,12 @@ var render = function() {
                       _vm._v(" "),
                       _c("td", { attrs: { "data-title": "Price" } }, [
                         _c("strong", [
-                          _vm._v(_vm._s(pizza.attributes.price) + "$")
+                          _vm._v(
+                            _vm._s(pizza.attributes.price) +
+                              "$ / " +
+                              _vm._s(pizza.attributes.euro_price) +
+                              "€"
+                          )
                         ])
                       ]),
                       _vm._v(" "),
@@ -38818,7 +38823,14 @@ var render = function() {
                               _vm._f("decimal")(
                                 pizza.attributes.price * pizza.quantity
                               )
-                            ) + "$"
+                            ) +
+                              "$  / " +
+                              _vm._s(
+                                _vm._f("decimal")(
+                                  pizza.attributes.euro_price * pizza.quantity
+                                )
+                              ) +
+                              "€"
                           )
                         ])
                       ])
@@ -38967,7 +38979,12 @@ var render = function() {
                         _vm._v(" "),
                         _c("td", [
                           _vm._v(
-                            _vm._s(_vm._f("decimal")(_vm.cartState.total)) + "$"
+                            _vm._s(_vm._f("decimal")(_vm.cartState.total)) +
+                              "$ / " +
+                              _vm._s(
+                                _vm._f("decimal")(_vm.cartState.totalInEuros)
+                              ) +
+                              "€"
                           )
                         ])
                       ]),
@@ -38993,7 +39010,15 @@ var render = function() {
                                   _vm.cartState.total +
                                     _vm.cartState.deliveryCharges
                                 )
-                              ) + "$"
+                              ) +
+                                "$ / " +
+                                _vm._s(
+                                  _vm._f("decimal")(
+                                    _vm.cartState.totalInEuros +
+                                      _vm.cartState.deliveryCharges
+                                  )
+                                ) +
+                                "€"
                             )
                           ])
                         ])
