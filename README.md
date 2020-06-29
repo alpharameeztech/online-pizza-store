@@ -7,6 +7,7 @@ The app lets you order pizza online and have the following features:
 - Add/Remove from the checkout page
 - Store the state of the cart on browser local storage
 - Store the Item Type, Items and the Orders on the database
+
  **Note:** At the moment, the app supports to place an order for the guest user. The sign up can be added later.
 
 **Live Link Of The App:** https://protected-cliffs-88071.herokuapp.com/
