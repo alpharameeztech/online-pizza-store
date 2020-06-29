@@ -50,7 +50,7 @@ As a final step, visit http://your_server_ip in the browser
 # Few screenshots of the Application
 
 - When visiting the app for the first time
-![Image description](https://ecatalog.s3-ap-southeast-1.amazonaws.com/resources/Screenshot+from+2020-06-29+10-32-42.png)
+![Image description](https://ecatalog.s3-ap-southeast-1.amazonaws.com/resources/Screenshot+from+2020-06-29+10-45-12.png)
 
 - When the cart is empty
 ![Image description](https://ecatalog.s3-ap-southeast-1.amazonaws.com/resources/Screenshot+from+2020-06-29+10-30-44.png)
