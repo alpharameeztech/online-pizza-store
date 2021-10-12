@@ -13,7 +13,7 @@
           <strong>
               Rameez Israr
           </strong>
-          (upcoming member of the Innoscripta). </p>
+          </p>
         <a href="#" class="back-to-top">Back to top <i class="fas fa-chevron-up"></i> </a>
       </div>
     </div>
