@@ -51,20 +51,23 @@ As a final step, visit http://your_server_ip in the browser
 # Few screenshots of the Application
 
 - When visiting the app for the first time
-![Image description](https://ecatalog.s3-ap-southeast-1.amazonaws.com/resources/Screenshot+from+2020-06-29+10-45-12.png)
+![first-visit](https://user-images.githubusercontent.com/36469012/137139047-d18b7b5b-4b5b-4d20-9510-dfc498992a62.png)
 
 - When the cart is empty
-![Image description](https://ecatalog.s3-ap-southeast-1.amazonaws.com/resources/Screenshot+from+2020-06-29+10-30-44.png)
+![empty-card](https://user-images.githubusercontent.com/36469012/137139247-de5721bb-b0e9-4c54-a653-9cfe5a1785ac.png)
 
 - When added the item in the cart
-![Image description](https://ecatalog.s3-ap-southeast-1.amazonaws.com/resources/Screenshot+from+2020-06-29+10-29-23.png)
+![added-item](https://user-images.githubusercontent.com/36469012/137139404-346aed36-4699-4ea3-9f1e-822643fe5176.png)
 
 - View all the times added in the cart
-![Image description](https://ecatalog.s3-ap-southeast-1.amazonaws.com/resources/Screenshot+from+2020-06-29+10-29-40.png)
+![all-items-added-on-the-cart](https://user-images.githubusercontent.com/36469012/137139493-2681e14a-ed0a-4492-a5b4-62268540b99f.png)
+
 
 - Checkout page where you can also update the quantity of the item
-![Image description](https://ecatalog.s3-ap-southeast-1.amazonaws.com/resources/Screenshot+from+2020-06-29+10-29-53.png)
+![checkout-page](https://user-images.githubusercontent.com/36469012/137139529-94c9b387-20c6-49e2-a9fb-9a2fded1ab6d.png)
+
 
 - When the order is successfully placed
-![Image description](https://ecatalog.s3-ap-southeast-1.amazonaws.com/resources/Screenshot+from+2020-06-29+10-37-42.png)
+![order-is-placed](https://user-images.githubusercontent.com/36469012/137139559-d76cee52-bb1a-4a19-a8c8-d3675bcd38b5.png)
+
 
